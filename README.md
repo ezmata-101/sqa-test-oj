@@ -5,7 +5,7 @@
 You will perform **system testing** on the provided Mock Competitive Programming API. The API implements users, contests, problems, and submissions with JWT-based auth and in-memory storage.
 
 * **Specifications & how to run:** Everything you need (endpoints, behaviors, and run instructions) is in the  **`documentation.md`**.
-  → **Do not** paste API specs in your report—**refer to `documentation.md`** instead.
+* **Do not** paste API specs in your report—**refer to `documentation.md`** instead.
 
 ## Important context
 
