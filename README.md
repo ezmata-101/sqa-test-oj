@@ -77,7 +77,7 @@ A lightweight, in-memory REST API for a competitive programming platform. It cov
    - The app listens on **port 3000**. Codespaces auto-detects it in the **Ports** panel.
    - Click the forwarded **3000** URL to open the API.
    - Set the port **Visibility** to **Public** if you are testing with postman web versions or similar tools.
-5. You can now access the API at `https://<your-codespace-name>-3000.<your-github-username>.preview.app.github.dev/`. 
+5. You shoule be able to access the API at `https://<your-codespace-name>-3000.<your-github-username>.preview.app.github.dev/`. 
 
 
 ## API Overview
@@ -198,8 +198,6 @@ A lightweight, in-memory REST API for a competitive programming platform. It cov
 
 ---
 ## Endpoint Reference (Details + Examples)
-
-> **Formatting note:** Examples below show JSON bodies and responses. No cURL or REST client commands are included.
 
 ### Auth Endpoints
 
@@ -775,22 +773,6 @@ Health/info
 ```json
 { "message": "Welcome to the Mock Competitive Programming API" }
 ```
-
----
-
-
-## Notes & Known Quirks
-
-- Some contest responses use `date` while the internal model uses `dateTime`. Treat both as the ISO start time.
-- Leaderboard points are random on each call; intended for demo only.
-- Passwords are not hashed in this mock; do not use in production.
-- Ownership/participant checks are based on token-derived values and in-memory arrays. In production you should:
-  - store numeric `userId` in the JWT (`sub`) and reference consistently,
-  - hash passwords,
-  - validate request bodies,
-  - normalize property names (prefer always `dateTime`).
-- **Type mismatch**: `getUsernameFromToken` returns a username string, but contest participants are numeric user IDs. Adjust logic if you extend this mock.
-- **Property mismatch in submission handler**: references `problem.contestID` (capital D) while problems store `contestId`. Align these if you adapt the code.
 
 ---
 
