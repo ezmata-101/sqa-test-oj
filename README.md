@@ -13,6 +13,17 @@ You will perform **system testing** on the provided Mock Competitive Programming
 * There are **intentional faults** in the implementation.
   **Finding, reproducing, and reporting those faults is your target.**
 
+## To test your own project (optional)
+
+* You **may use your own project** as a test target.
+* That project must have the following characteristics (at least):
+  * User Authentication and Authorization
+  * Must return appropriate HTTP status codes (not just 200 and 500)
+  * There should be scope to use property of a response in another request
+  * Must have api endpoints that take parameters and return data
+  * There should be at least one api endpoint that returns a list of items
+  * Must have at least one endpoint that accepts a POST request with a body
+
 ## Collaboration policy
 
 * You **may share “how to do something”** (e.g., how to set up, how to use a tool, how to structure a test plan) with other teams.
