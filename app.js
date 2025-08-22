@@ -659,10 +659,14 @@ app.post('/problems/:id/submit', (req, res) => {
     if (!problem) {
         return res.status(404).send({ message: 'Problem not found' });
     }
+    
+    if(!req.body) {
+        return res.status(400).send({ message: 'Your request must contain a code.' });
+    }
 
-    const {problemId, code} = req.body;
-    if (!problemId || !code) {
-        return res.status(400).send({ message: 'Problem ID and code are required' });
+    const {code} = req.body;
+    if (!code) {
+        return res.status(400).send({ message: 'Code is required' });
     }
     const userId = getUsernameFromToken(req.headers['authorization']);
     if (!userId) {
