@@ -22,7 +22,7 @@ You will perform **system testing** on the provided Mock Competitive Programming
   * There should be scope to use property of a response in another request
   * Must have api endpoints that take parameters and return data
   * There should be at least one api endpoint that returns a list of items
-  * Must have at least one endpoint that accepts a POST request with a body
+  * Must have at least one endpoint that accepts a POST and at least one PUT request with a body
 
 ## Collaboration policy
 
